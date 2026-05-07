@@ -1,0 +1,1 @@
+This is my first TypeScript Assignment from Programming Hero Level 2 Batch-7 course. In this assignment there are 7 problems with solution and 2 blog writing from 4 topics.
