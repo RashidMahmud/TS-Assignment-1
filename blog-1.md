@@ -1,9 +1,8 @@
-Topic1: Why any is a Type Safety Hole and Why unknown is Safer
-
-TypeScript-এর প্রধান কাজ হলো কোড রান করার আগেই ভুল ধরিয়ে দেওয়া। কিন্তু any ব্যবহার করা মানে হলো TypeScript-কে বলা যে "তুমি এই ভেরিয়েবলটি চেক করো না"। এটি টাইপ সিস্টেমের ভেতর একটি গর্ত বা "hole" তৈরি করে।
+Topic1:Why is any labeled a "type safety hole," and why is unknown the safer choice for handling unpredictable data? Explain the concept of type narrowing.
 
 Why any is a "Type Safety Hole"?
 
+TypeScript-এর প্রধান কাজ হলো কোড রান করার আগেই ভুল ধরিয়ে দেওয়া। কিন্তু any ব্যবহার করা মানে হলো TypeScript-কে বলা যে "তুমি এই ভেরিয়েবলটি চেক করো না"। এটি টাইপ সিস্টেমের ভেতর একটি গর্ত বা "hole" তৈরি করে।
 any ব্যবহার করলে TypeScript কোনো বাধা দেয় না। আপনি ভুল টাইপের মেথড কল করলেও এটি কম্পাইল টাইমে কোনো এরর দেখায় না, কিন্তু রান টাইমে অ্যাপ ক্র্যাশ করে।
 
 let value: any = "Rashid";
@@ -23,14 +22,9 @@ if (typeof value === "string") {
   console.log(value.toUpperCase()); // এখন এটি নিরাপদ।
 }
 
-Concept of Type Narrowing
+Concept of Type Narrowing:
 
 Type narrowing হলো একটি টেকনিক যার মাধ্যমে একটি ব্রড টাইপ (যেমন unknown) থেকে কোডের লজিক ব্যবহার করে একটি নির্দিষ্ট বা স্পেসিফিক টাইপে আসা হয়। এটি অনেকটা ফিল্টার করার মতো।
-
-Narrowing করার প্রধান উপায়সমূহ:
-1)typeof (Primitive টাইপের জন্য)
-2)instanceof (Class বা Object এর জন্য)
-3)Property check ("name" in object)
 
 Conclusion:
 
